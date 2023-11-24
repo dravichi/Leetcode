@@ -6,12 +6,12 @@ class Solution:
             if nums[m] == target:
                 return m
             if nums[s] <= nums[m]:
-                if target >= nums[s] and target < nums[m]:
+                if nums[m] > target >= nums[s]:
                     e = m-1
                 else:
                     s = m+1
             else:
-                if target > nums[m] and target <= nums[e]:
+                if nums[m] < target <= nums[e]:
                     s = m+1
                 else:
                     e = m-1
